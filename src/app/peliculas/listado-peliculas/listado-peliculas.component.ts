@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-listado-peliculas',
@@ -8,27 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class ListadoPeliculasComponent implements OnInit {
 
   constructor() { }
+  @Input () 
   peliculas;
   ngOnInit(): void {
-    setTimeout(() => { this.peliculas  = [
-      
-        {
-      titulo: 'spiderman',
-      fecha: new Date(),
-      presio: 3000
-    },
-    {
-      titulo: 'IronMan',
-      fecha: new Date('03-02-2022'),
-      presio: 3400
-    },
-    {
-      titulo: 'UFC',
-      fecha: new Date('06-03-2020'),
-      presio: 5000
-    }
-     ]
-  }, 3000);
+    
 }
   duplicarNumero(valor:number):number{
     return valor * 2;
