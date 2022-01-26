@@ -17,7 +17,7 @@
    
      <div>
        pelicula {{index +1}}: {{pelicula.titulo}}
-     </div>
+     <button style="margin-left: 1rem;" (click)="remover(index)">Remover</button> </div>
      <div>
        {{pelicula.fecha | date:"dd-MMMM-yyyy" |uppercase}}
      </div>

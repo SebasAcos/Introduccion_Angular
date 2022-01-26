@@ -13,7 +13,7 @@ export class ListadoPeliculasComponent implements OnInit {
   ngOnInit(): void {
     
 }
-  duplicarNumero(valor:number):number{
-    return valor * 2;
+  remover(indicePelicula: number): void{
+    this.peliculas.splice(indicePelicula, 1);
   }
 }
