@@ -1,19 +1,17 @@
-<p>listado-peliculas works!</p>
+<input type="file" style="display: none" #cargador>
 
-<div>
+<button (click)="cargador.click()">Cargar Archivo</button>
+
+
+
+
+
+
+
+
+<!--<div>
     
    </div>
-   
-   <div>
-     prueba de suma: {{2+3}}
-   </div>
-   <div>
-     llamar funcion de component.ts:
-   el doble del valor es {{duplicarNumero(3)}}
-   </div>
-   
-   <h2>Datos de peliculas (entidad(lista))</h2>
-   
    <div *ngIf="!peliculas">
      <img  class="imagen" src ="https://c.tenor.com/IRrZibhblugAAAAd/katy-bentz-spin.gif"/>
    </div>
@@ -22,12 +20,12 @@
      <p>No hay peliculas</p>
    </div>
    
-   <div *ngIf= "peliculas && peliculas.length > 0 ">
+   <ng-container *ngIf= "peliculas && peliculas.length > 0 ">
    <div *ngFor="let pelicula of peliculas; let index = index "  class ="pelicula-contenedor" >
    
      <div>
        pelicula {{index +1}}: {{pelicula.titulo}}
-     </div>
+     <button style="margin-left: 1rem;" (click)="remover(index)">Remover</button> </div>
      <div>
        {{pelicula.fecha | date:"dd-MMMM-yyyy" |uppercase}}
      </div>
@@ -36,4 +34,4 @@
      </div>
    
      </div>
-   </div>
+   </ng-container>-->
