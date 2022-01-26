@@ -1,26 +1,10 @@
-<input type="file" style="display: none" #cargador>
-
-<button (click)="cargador.click()">Cargar Archivo</button>
-
-
-
+<app-listado-generico [listado]="peliculas">
+ <ng-container vacio>
+  <div>mensaje personalizado <b>vacio</b></div>
+ </ng-container>
 
 
-
-
-
-<!--<div>
-    
-   </div>
-   <div *ngIf="!peliculas">
-     <img  class="imagen" src ="https://c.tenor.com/IRrZibhblugAAAAd/katy-bentz-spin.gif"/>
-   </div>
-   
-   <div *ngIf="peliculas?.length === 0"> 
-     <p>No hay peliculas</p>
-   </div>
-   
-   <ng-container *ngIf= "peliculas && peliculas.length > 0 ">
+    <ng-container contenido>
    <div *ngFor="let pelicula of peliculas; let index = index "  class ="pelicula-contenedor" >
    
      <div>
@@ -34,4 +18,5 @@
      </div>
    
      </div>
-   </ng-container>-->
+    </ng-container>
+</app-listado-generico>
