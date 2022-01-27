@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,13 +9,33 @@ import { Router } from '@angular/router';
 })
 export class CrearGenerosComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private formBuilder: FormBuilder) { }
+
+  form!: FormGroup;
 
   ngOnInit(): void {
+    this.form = this.formBuilder.group({
+      nombre:['',{
+        validators: [Validators.required, Validators.minLength(4)]
+       }]
+    });
+
+
   }
   guardarCambios(){
     // ..guardar cambios
-    this.router.navigate(['/generos'])
+    this.router.navigate(['/generos']);
+  }
+  obtenerErrorCampoNombre(){
+    var campo = this.form.get('nombre');
+
+    if(campo?.hasError('required')){
+      return'El campo nombre es requerido';
+    }
+    if(campo?.hasError('minlength')){
+      return 'la longitud mininma es de 3 caracteres'
+    }
+    return '';
   }
 
 }
