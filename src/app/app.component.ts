@@ -27,7 +27,7 @@ export class AppComponent implements OnInit{
     presio: 5000
   }
    ]
-}, 3000);
+}, 4000);
   }
     
   title = 'component.ts';
@@ -35,7 +35,7 @@ export class AppComponent implements OnInit{
 
   peliculasEnCines;
   
-  proximaspeliculas =[{
+  proximaspeliculas =[/***{
     titulo: 'pepe la mor',
     fecha: new Date(),
     presio: 3000
@@ -50,7 +50,7 @@ export class AppComponent implements OnInit{
     fecha: new Date('06-03-2020'),
     presio: 5000
 
-  }]
+  }**/]
 
   duplicarNumero(valor:number):number{
     return valor * 2;
