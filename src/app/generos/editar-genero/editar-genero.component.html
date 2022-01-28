@@ -1,2 +1,5 @@
 <h2>Editar Género</h2>
-<app-formulario-genero (submmit)="guardarCambios($event)"></app-formulario-genero>
+
+<app-formulario-genero
+[modelo]="modelo"
+(submmit)="guardarCambios($event)"></app-formulario-genero>
