@@ -96,6 +96,7 @@ private escribirParametrosBusquedaEnURL(){
 }
 
 if(valoresFormulario.proximosEstrenos){
+
   queryStrings.push('proximosEstrenos=${valoresFormulario.proximosEstrenos}');
 }
 if(valoresFormulario.enCines){
