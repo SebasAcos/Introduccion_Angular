@@ -31,7 +31,8 @@ import { FormularioActoresComponent } from './actores/formulario-actores/formula
 import { InputImgComponent } from './utilidades/input-img/input-img.component';
 import { InputMarkdownComponent } from './utilidades/input-markdown/input-markdown.component';
 import { FormularioCineComponent } from './cines/formulario-cine/formulario-cine.component';
-
+import {LeafletModule} from '@asymmetrik/ngx-leaflet';
+import { MapaComponent } from './utilidades/mapa/mapa.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { FormularioCineComponent } from './cines/formulario-cine/formulario-cine
     InputImgComponent,
     InputMarkdownComponent,
     FormularioCineComponent,
+    MapaComponent,
     
 
   ],
@@ -67,6 +69,7 @@ import { FormularioCineComponent } from './cines/formulario-cine/formulario-cine
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
+    LeafletModule,
     MarkdownModule.forRoot()
   ],
   providers: [],
