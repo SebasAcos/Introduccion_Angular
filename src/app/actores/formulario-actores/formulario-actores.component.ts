@@ -8,13 +8,16 @@ import { actorCreacionDTO, actorDTO } from '../actor';
   styleUrls: ['./formulario-actores.component.css']
 })
 export class FormularioActoresComponent implements OnInit {
-
-  constructor(private formBuilder: FormBuilder ) { }
+  @Input()
+   modelo: actorDTO;
+  
+  constructor(private formBuilder: FormBuilder ) { 
+    this.modelo={nombre:'', foto:'',fechaNacimiento:new Date}
+  }
 
   form!: FormGroup;
 
-  @Input()
-  modelo: actorDTO | undefined;
+
 
   @Output()
   OnSubmit: EventEmitter<actorCreacionDTO> = new EventEmitter<actorCreacionDTO>();
