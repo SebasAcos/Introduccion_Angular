@@ -56,7 +56,7 @@ export class AutocompleteActoresComponent implements OnInit {
     const indicePrevio =this.actoresSeleccionados.findIndex(
       actor => actor === event.item.data
     )
-    moveItemInArray(this.actoresSeleccionados, indicePrevio, event.currentIndex);
+    moveItemInArray(this.actoresSeleccionados, indicePrevio, event.currentIndex)
     this.table.renderRows();
 
 
