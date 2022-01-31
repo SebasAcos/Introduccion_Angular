@@ -1,6 +1,7 @@
 import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 import { MultipleSelectorModule } from 'src/app/utilidades/selector-multiple/MultipleSelectorModel';
 import { peliculaCreacionDTO, peliculaDTO } from '../peliculas';
 
@@ -75,7 +76,7 @@ export class FormularioPeliculaComponent implements OnInit {
   
 
   }
-  
+
   
 
 }
