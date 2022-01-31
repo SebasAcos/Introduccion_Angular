@@ -12,10 +12,10 @@ export class InputImgComponent implements OnInit {
 
   imagenBase64: string | undefined;
   @Input()
-  urlImagenActual: string | undefined;
+  urlImagenActual: string  | undefined;
 
   @Output()
-  archiboSeleccionado: EventEmitter<File> = new EventEmitter<File>();
+  archivoSeleccionado: EventEmitter<File> = new EventEmitter<File>();
 
  
 
@@ -27,7 +27,7 @@ export class InputImgComponent implements OnInit {
       const file: File= event.target.files[0];
       toBase64(file).then((value: any)=> this.imagenBase64 = value)
       .catch(error => console.log(error));
-      this.archiboSeleccionado.emit(file);
+      this.archivoSeleccionado.emit(file);
       this.urlImagenActual = 'null';
 
     }

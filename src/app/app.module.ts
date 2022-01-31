@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ListadoPeliculasComponent } from './peliculas/listado-peliculas/listado-peliculas.component';
 import { ListadoGenericoComponent } from './utilidades/listado-generico/listado-generico.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import {MarkdownModule} from 'ngx-markdown';
 
 
@@ -33,6 +33,9 @@ import { InputMarkdownComponent } from './utilidades/input-markdown/input-markdo
 import { FormularioCineComponent } from './cines/formulario-cine/formulario-cine.component';
 import {LeafletModule} from '@asymmetrik/ngx-leaflet';
 import { MapaComponent } from './utilidades/mapa/mapa.component';
+import { FormularioPeliculaComponent } from './peliculas/formulario-pelicula/formulario-pelicula.component';
+import { SelectorMultipleComponent } from './utilidades/selector-multiple/selector-multiple.component';
+import { AutocompleteActoresComponent } from './actores/autocomplete-actores/autocomplete-actores.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +63,9 @@ import { MapaComponent } from './utilidades/mapa/mapa.component';
     InputMarkdownComponent,
     FormularioCineComponent,
     MapaComponent,
+    FormularioPeliculaComponent,
+    SelectorMultipleComponent,
+    AutocompleteActoresComponent,
     
 
   ],
@@ -69,6 +75,7 @@ import { MapaComponent } from './utilidades/mapa/mapa.component';
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
+    FormsModule,
     LeafletModule,
     MarkdownModule.forRoot()
   ],
